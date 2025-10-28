@@ -157,7 +157,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              © {2020} L'Art du Web. Tous droits réservés. 
+              © {currentYear} L'Art du Web. Tous droits réservés. 
               Fait avec <Heart className="inline w-4 h-4 text-red-500 mx-1" /> en France
             </motion.p>
 
