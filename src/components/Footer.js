@@ -156,7 +156,7 @@ const Footer = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-            >
+            > {/*changer l'année ?*/}
               © {currentYear} L'Art du Web. Tous droits réservés. 
               Fait avec <Heart className="inline w-4 h-4 text-red-500 mx-1" /> en France
             </motion.p>
