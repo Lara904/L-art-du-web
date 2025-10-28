@@ -16,3 +16,10 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[plugins]]
+package = "@netlify/plugin-form-handler"
+
+[forms]
+  [[forms.contact]]
+    notifications = ["LartDuWeb@proton.me"]
