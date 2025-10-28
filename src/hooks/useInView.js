@@ -29,5 +29,5 @@ export const useInView = (options = {}) => {
     };
   }, [options.threshold, options.rootMargin, hasBeenInView]);
 
-  return { ref, isInView, hasBeenInView };
+  return { options, hasBeenInView };
 };

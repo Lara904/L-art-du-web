@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Users, Target, Heart, Star, Coffee, Rocket, Globe } from 'lucide-react';
+import { Award, Users, Target, Heart, Rocket} from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const About = () => {

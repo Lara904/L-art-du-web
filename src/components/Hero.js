@@ -40,7 +40,7 @@ const Hero = () => {
     },
   };
 
-  const floatingVariants = {
+  /*const floatingVariants = {
     animate: {
       y: [0, -20, 0],
       transition: {
@@ -49,7 +49,7 @@ const Hero = () => {
         ease: "easeInOut",
       },
     },
-  };
+  };*/
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
