@@ -1,9 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
+/**
+ * Hook personnalisé pour détecter quand un élément est visible à l’écran.
+ * @param {Object} options - options pour l'IntersectionObserver (threshold, rootMargin, etc.)
+ */
 export const useInView = (options = {}) => {
   const ref = useRef(null);
-  const [isInView, setIsInView] = useState(false);
   const [hasBeenInView, setHasBeenInView] = useState(false);
+  const [, setIsInView] = useState(false); // ✅ on ne garde que le setter, car isInView n'est pas utilisé
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -18,16 +22,12 @@ export const useInView = (options = {}) => {
     });
 
     const currentRef = ref.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
+    if (currentRef) observer.observe(currentRef);
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+      if (currentRef) observer.unobserve(currentRef);
     };
-  }, [options.threshold, options.rootMargin, hasBeenInView]);
+  }, [options, hasBeenInView]); // ✅ options ajouté ici
 
-  return { options, hasBeenInView };
+  return { ref, hasBeenInView };
 };
