@@ -43,28 +43,6 @@ npm start
 
 L'application sera accessible sur `http://localhost:3000`
 
-## 📧 Configuration EmailJS
-
-Pour activer l'envoi d'emails via le formulaire de contact :
-
-1. Créer un compte sur [EmailJS](https://www.emailjs.com/)
-
-2. Créer un service email (Gmail, Outlook, etc.)
-
-3. Créer un template d'email avec les variables :
-   - `from_name` - Nom de l'expéditeur
-   - `from_email` - Email de l'expéditeur
-   - `message` - Message du formulaire
-   - `to_email` - lartDuWeb@proton.me
-
-4. Modifier le fichier `src/components/Contact.js` :
-```javascript
-const EMAILJS_SERVICE_ID = 'votre_service_id';
-const EMAILJS_TEMPLATE_ID = 'votre_template_id';
-const EMAILJS_PUBLIC_KEY = 'votre_public_key';
-```
-
-5. Décommenter le code EmailJS dans la fonction `onSubmit` du composant Contact.
 
 ## 🏗️ Build de production
 
@@ -130,36 +108,6 @@ Le site est configuré comme une PWA avec :
 - Icons pour installation
 - Mode offline (avec Service Worker)
 
-## 🚀 Déploiement
-
-### Vercel
-```bash
-npm install -g vercel
-vercel
-```
-
-### Netlify
-1. Build le projet : `npm run build`
-2. Déployer le dossier `build/` sur Netlify
-
-### GitHub Pages
-```bash
-npm install --save-dev gh-pages
-```
-
-Ajouter dans `package.json` :
-```json
-"homepage": "https://Lara904.github.io/lart-du-web",
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-}
-```
-
-Puis :
-```bash
-npm run deploy
-```
 
 ## 📝 Structure du projet
 
