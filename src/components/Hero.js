@@ -180,7 +180,7 @@ const Hero = () => {
           </motion.a>
         </motion.div>
 
-        {/* Statistiques */}
+        {/* Statistiques 
         <motion.div
           variants={itemVariants}
           className="mt-20 grid grid-cols-3 gap-8 max-w-3xl mx-auto"
@@ -209,7 +209,7 @@ const Hero = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       {/* Indicateur de scroll */}

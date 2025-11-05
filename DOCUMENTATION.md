@@ -91,23 +91,7 @@ npm install
 cp .env.example .env.local
 ```
 
-### 2. Configuration EmailJS
-
-1. Créer un compte sur [EmailJS](https://www.emailjs.com/)
-2. Configurer un service email (Gmail, Outlook, etc.)
-3. Créer un template avec ces variables:
-   - `from_name`
-   - `from_email`
-   - `message`
-   - `to_email`
-4. Ajouter les clés dans `.env.local`:
-```env
-REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-### 3. Scripts disponibles
+### 2. Scripts disponibles
 
 ```bash
 # Développement
@@ -208,88 +192,6 @@ Scores Lighthouse attendus:
 - Critical CSS inline
 - Préchargement des polices
 
-## Déploiement
-
-### Option 1: Netlify (Recommandé)
-
-1. Connecter le repository GitHub
-2. Build settings:
-   - Build command: `npm run build`
-   - Publish directory: `build`
-3. Variables d'environnement dans Netlify UI
-4. Deploy automatique à chaque push
-
-### Option 2: Vercel
-
-```bash
-# Installation CLI
-npm i -g vercel
-
-# Déploiement
-vercel --prod
-```
-
-### Option 3: GitHub Pages
-
-```bash
-# Ajouter homepage dans package.json
-"homepage": "https://Lara904.github.io/lart-du-web"
-
-# Installer gh-pages
-npm install --save-dev gh-pages
-
-# Ajouter scripts dans package.json
-"predeploy": "npm run build",
-"deploy": "gh-pages -d build"
-
-# Déployer
-npm run deploy
-```
-
-## Maintenance
-
-### Mises à jour régulières
-
-```bash
-# Vérifier les dépendances obsolètes
-npm outdated
-
-# Mettre à jour les dépendances
-npm update
-
-# Audit de sécurité
-npm audit
-npm audit fix
-```
-
-### Tests de performance
-
-```bash
-# Test Lighthouse local
-node lighthouse-test.js http://localhost:3000
-
-# Test Lighthouse production
-node lighthouse-test.js https://lartduweb.fr
-```
-
-### Monitoring
-
-Outils recommandés:
-- **Google Analytics** - Analyse du trafic
-- **Sentry** - Monitoring des erreurs
-- **Hotjar** - Heatmaps et recordings
-- **PageSpeed Insights** - Monitoring performance
-
-### Checklist de déploiement
-
-- [ ] Variables d'environnement configurées
-- [ ] EmailJS opérationnel
-- [ ] Images optimisées
-- [ ] Tests Lighthouse passés
-- [ ] SEO meta tags vérifiés
-- [ ] Sitemap à jour
-- [ ] HTTPS activé
-- [ ] Monitoring configuré
 
 ## Support
 
@@ -300,4 +202,4 @@ Pour toute question ou assistance:
 
 ---
 
-© 2024 L'Art du Web - Tous droits réservés
+© 2025 L'Art du Web - Tous droits réservés

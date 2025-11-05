@@ -16,8 +16,9 @@ const Portfolio = () => {
       description: "Site d'une foodtech en mobile first avec animations CSS avancées",
       longDescription: "Implémentation complète du site OhMyFood avec Sass, incluant des animations CSS sophistiquées pour améliorer l'expérience utilisateur. Focus sur la performance mobile et l'accessibilité.",
       image: "/images/p4.jpg",
+      placeholderImage: "data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='sans-serif' font-size='24'%3EOhMyFood%3C/text%3E%3C/svg%3E",
       tags: ["HTML", "Sass", "Animations CSS", "Mobile First"],
-      github: "https://github.com/Lara904",
+      github: "https://github.com/Lara904/ohmyfood",
       demo: "#",
       duration: "60 heures",
       highlights: [
@@ -34,8 +35,9 @@ const Portfolio = () => {
       description: "Carrousel dynamique pour une imprimerie avec JavaScript vanilla",
       longDescription: "Développement d'un carrousel interactif en JavaScript pur pour le site d'une imprimerie. Gestion des événements, manipulation du DOM et optimisation des performances.",
       image: "/images/p5.jpg",
+      placeholderImage: "data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='sans-serif' font-size='24'%3EPrint it!%3C/text%3E%3C/svg%3E",
       tags: ["JavaScript", "DOM", "Events", "Carousel"],
-      github: "https://github.com/Lara904",
+      github: "https://github.com/Lara904/Print-it",
       demo: "#",
       duration: "20 heures",
       highlights: [
@@ -52,8 +54,9 @@ const Portfolio = () => {
       description: "Site dynamique d'architecte avec API et gestion admin",
       longDescription: "Création d'un site web dynamique pour une architecte d'intérieur. Intégration avec une API REST, authentification, et interface d'administration pour gérer le portfolio.",
       image: "/images/p6.png",
+      placeholderImage: "data:image/svg+xml,%3Csvg width='800' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='800' height='600' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='sans-serif' font-size='24'%3ESophie Bluel%3C/text%3E%3C/svg%3E",
       tags: ["JavaScript", "API REST", "Auth", "Dynamic"],
-      github: "https://github.com/Lara904",
+      github: "https://github.com/Lara904/Portfolio-Sophie-Bluel",
       demo: "#",
       duration: "60 heures",
       highlights: [
@@ -71,7 +74,7 @@ const Portfolio = () => {
       longDescription: "Développement d'une application web de location de logements avec React. Utilisation de React Router pour la navigation, composants réutilisables et animations CSS.",
       image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
       tags: ["React", "React Router", "Sass", "Components"],
-      github: "https://github.com/Lara904",
+      github: "https://github.com/Lara904/Kasa",
       demo: "#",
       duration: "60 heures",
       highlights: [
@@ -89,7 +92,7 @@ const Portfolio = () => {
       longDescription: "Audit et optimisation complète d'un site de photographe. Amélioration du référencement naturel, de la performance et de l'accessibilité pour atteindre les premières positions Google.",
       image: "/images/p8.webp",
       tags: ["SEO", "Performance", "Lighthouse", "Accessibilité"],
-      github: "https://github.com/Lara904",
+      github: "https://github.com/Lara904/Nina-Carducci",
       demo: "#",
       duration: "40 heures",
       highlights: [
@@ -107,7 +110,7 @@ const Portfolio = () => {
       longDescription: "Prise en charge du débogage d'un site d'agence événementielle. Utilisation des Chrome DevTools, rédaction de tests et cahier de recette complet.",
       image: "/images/p9.png",
       tags: ["Debug", "Testing", "DevTools", "QA"],
-      github: "https://github.com/Lara904",
+      github: "https://github.com/Lara904/77events-react-debug",
       demo: "#",
       duration: "60 heures",
       highlights: [
@@ -125,7 +128,7 @@ const Portfolio = () => {
       longDescription: "Développement du front-end d'une application bancaire avec React et Redux. Intégration API REST, authentification sécurisée et gestion d'état globale.",
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
       tags: ["React", "Redux", "API", "Authentication"],
-      github: "https://github.com/Lara904",
+      github: "https://github.com/Lara904/Impl-mentez-le-front-end-d-une-application-bancaire-avec-React",
       demo: "#",
       duration: "80 heures",
       highlights: [

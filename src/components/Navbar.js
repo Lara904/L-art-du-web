@@ -27,11 +27,23 @@ const Navbar = () => {
 
   const handleSmoothScroll = (e, href) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
+    e.stopPropagation();
+    
+    // Fermer le menu mobile immédiatement
+    setIsMobileMenuOpen(false);
+    
+    // Petit délai pour laisser le menu se fermer
+    setTimeout(() => {
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        targetElement.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 300);
   };
 
   return (
@@ -120,7 +132,7 @@ const Navbar = () => {
             {/* Mobile Theme Toggle */}
             <motion.button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
               whileTap={{ scale: 0.9 }}
               aria-label="Basculer le thème"
             >
@@ -129,7 +141,7 @@ const Navbar = () => {
 
             <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
               whileTap={{ scale: 0.9 }}
               aria-label="Menu mobile"
             >
@@ -142,7 +154,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              className="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-dark-bg shadow-lg"
+              className="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-dark-bg shadow-lg z-50"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -153,8 +165,10 @@ const Navbar = () => {
                   <motion.a
                     key={link.href}
                     href={link.href}
-                    onClick={(e) => handleSmoothScroll(e, link.href)}
-                    className="flex items-center space-x-3 text-gray-700 dark:text-gray-300 hover:text-deep-blue dark:hover:text-purple transition-colors"
+                    onClick={(e) => {
+                      handleSmoothScroll(e, link.href);
+                    }}
+                    className="flex items-center space-x-3 text-gray-700 dark:text-gray-300 hover:text-deep-blue dark:hover:text-purple transition-colors block"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
