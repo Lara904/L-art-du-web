@@ -280,7 +280,7 @@ const Contact = () => {
                   {[
                     {
                       question: "Combien coûte un site web ?",
-                      answer: "Les tarifs varient selon la complexité : site vitrine à partir de 1500€, e-commerce à partir de 3000€. Devis gratuit personnalisé sous 24h."
+                      answer: "Les tarifs varient selon la complexité : site vitrine à partir de 300€, e-commerce à partir de 1000€. Devis gratuit personnalisé sous 24h."
                     },
                     {
                       question: "Quel est le délai de réalisation ?",
