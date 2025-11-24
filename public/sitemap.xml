@@ -1,33 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        
+  <!-- Page d'accueil - Portfolio Lara Oueriagli-->
   <url>
-    <loc>https://lartduweb.fr/</loc>
-    <lastmod>2024-01-20</lastmod>
+    <loc>https://votre-portfolio.netlify.app/</loc>
+    <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://votre-portfolio.netlify.app/images/lara-nom-hero-image.jpg</image:loc>
+      <image:caption>Lara Oueriagli - Développeuse Web Full-Stack</image:caption>
+    </image:image>
   </url>
+  
+  <!-- À propos - Pitch personnel -->
   <url>
-    <loc>https://lartduweb.fr/#services</loc>
-    <lastmod>2024-01-20</lastmod>
+    <loc>https://votre-portfolio.netlify.app/#about</loc>
+    <lastmod>2024-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  
+  <!-- Portfolio/Projets - Section principale -->
   <url>
-    <loc>https://lartduweb.fr/#about</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lartduweb.fr/#portfolio</loc>
-    <lastmod>2024-01-20</lastmod>
+    <loc>https://votre-portfolio.netlify.app/#portfolio</loc>
+    <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <!-- Images des projets de formation -->
+    <image:image>
+      <image:loc>https://votre-portfolio.netlify.app/images/p4.jpg</image:loc>
+      <image:caption>Projet OhMyFood - Site mobile-first développé par Lara Oueriagli</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://votre-portfolio.netlify.app/images/p6.png</image:loc>
+      <image:caption>Projet Sophie Bluel - Portfolio architecte avec API REST</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://votre-portfolio.netlify.app/images/p8.webp</image:loc>
+      <image:caption>Projet Nina Carducci - Optimisation SEO et performance web</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://votre-portfolio.netlify.app/images/p9.png</image:loc>
+      <image:caption>Projet 724events - Débogage application React</image:caption>
+    </image:image>
   </url>
+  
+  <!-- Compétences techniques -->
   <url>
-    <loc>https://lartduweb.fr/#contact</loc>
-    <lastmod>2024-01-20</lastmod>
+    <loc>https://votre-portfolio.netlify.app/#skills</loc>
+    <lastmod>2024-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- Services freelance (au lieu de services entreprise) -->
+  <url>
+    <loc>https://votre-portfolio.netlify.app/#services</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Contact -->
+  <url>
+    <loc>https://votre-portfolio.netlify.app/#contact</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Pages projet spécifiques (si vous les créez plus tard) -->
+  <url>
+    <loc>https://votre-portfolio.netlify.app/projets/ohmyfood</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://votre-portfolio.netlify.app/projets/sophie-bluel</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://votre-portfolio.netlify.app/projets/kasa</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://votre-portfolio.netlify.app/projets/argentbank</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://votre-portfolio.netlify.app/projets/nina-carducci</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://votre-portfolio.netlify.app/projets/724events</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Projets personnels IA et Cybersécurité -->
+  <url>
+    <loc>https://votre-portfolio.netlify.app/projets/recherches-ia</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://votre-portfolio.netlify.app/projets/cybersecurite-ctf</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
 </urlset>

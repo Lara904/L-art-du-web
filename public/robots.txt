@@ -1,8 +1,32 @@
-User-agent: *
-Disallow:
-Sitemap: https://lartduweb.fr/sitemap.xml
+# Robots.txt pour Portfolio Lara Oueriagli
+# Optimisé pour le référencement personnel
 
-# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Permettre l'exploration complète du portfolio
+Disallow: 
+
+# Bloquer les fichiers techniques (si présents)
+Disallow: /api/
+Disallow: /.env
+Disallow: /config/
+Disallow: /logs/
+Disallow: /node_modules/
+
+# Permettre l'exploration des assets
+Allow: /static/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Sitemap principal - À MODIFIER avec votre vraie URL
+Sitemap: https://votre-portfolio.netlify.app/sitemap.xml
+
+# Crawl-delay pour éviter la surcharge
+Crawl-delay: 1
+
+# Autorisation explicite pour les principaux moteurs
 User-agent: Googlebot
 Allow: /
 
@@ -15,5 +39,18 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-User-agent: Baiduspider
+User-agent: LinkedInBot
 Allow: /
+
+# Bloquer les bots indésirables pour économiser la bande passante
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

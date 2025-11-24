@@ -42,7 +42,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Lara904', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/lara-oueriagli/', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:lartDuWeb@proton.me', label: 'Email' }
   ];
 
@@ -160,27 +160,6 @@ const Footer = () => {
               © {currentYear} L'Art du Web. Tous droits réservés. 
               Fait avec <Heart className="inline w-4 h-4 text-red-500 mx-1" /> en France
             </motion.p>
-
-            {/* Badges de performance */}
-            <div className="flex items-center space-x-4">
-              <span className="text-xs text-gray-500">
-                Score Lighthouse
-              </span>
-              <div className="flex space-x-2">
-                {['98', '100', '100', '100'].map((score, index) => (
-                  <motion.div
-                    key={index}
-                    className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-xs font-bold"
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ delay: index * 0.1, type: "spring" }}
-                    viewport={{ once: true }}
-                  >
-                    {score}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>

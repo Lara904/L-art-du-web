@@ -1,39 +1,48 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Users, Target, Heart, Rocket} from 'lucide-react';
+import { Award, Users, Target, Heart, Rocket, Brain, Shield} from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const About = () => {
   const { ref, hasBeenInView } = useInView({ threshold: 0.3 });
 
-  const values = [
+  const competences = [
     {
       icon: Target,
-      title: "Précision",
-      description: "Chaque pixel compte, chaque ligne de code est optimisée"
+      title: "Développement Front-End",
+      description: "React, JavaScript, HTML/CSS, animations et responsive design"
     },
     {
       icon: Heart,
-      title: "Créativité",
-      description: "Des designs uniques qui captivent et convertissent"
+      title: "Intégration Web",
+      description: "Sass, TailwindCSS, optimisation des performances et accessibilité"
     },
     {
       icon: Rocket,
-      title: "Performance",
-      description: "Des sites ultra-rapides pour une expérience optimale"
+      title: "Outils & DevOps", 
+      description: "Git, GitHub, Lighthouse, SEO et débogage avancé"
+    },
+    {
+      icon: Brain,
+      title: "Intelligence Artificielle",
+      description: "Exploration des technologies IA et machine learning"
+    },
+    {
+      icon: Shield,
+      title: "Cybersécurité",
+      description: "TryHackMe, Capture The Flag, sécurité web et tests de pénétration"
     },
     {
       icon: Users,
-      title: "Proximité client",
-      description: "Votre succès est notre priorité absolue"
+      title: "Méthodologie",
+      description: "Agile, documentation technique et résolution de problèmes"
     }
   ];
 
-  const stats = [
-    { number: "5+", label: "Années d'expérience" },
-    { number: "50+", label: "Projets réalisés" },
-    { number: "98%", label: "Score Lighthouse moyen" },
-    { number: "24h", label: "Temps de réponse" }
+  const technologies = [
+    'React', 'JavaScript', 'HTML5', 'CSS3', 'Sass', 'TailwindCSS', 
+    'Git', 'GitHub', 'API REST', 'Node.js', 'SEO', 'Lighthouse',
+    'Python', 'TryHackMe', 'Burp Suite', 'Figma'
   ];
 
   const containerVariants = {
@@ -79,100 +88,109 @@ const About = () => {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-              L'excellence au service de votre vision
+              Mon parcours et ma passion
             </h2>
             
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Nous sommes une équipe passionnée d'experts du web, dédiée à créer des expériences digitales 
-              exceptionnelles qui propulsent votre entreprise vers de nouveaux sommets.
+              De la logique algorithmique à l'art du web, découvrez mon histoire et ma vision du développement moderne.
             </p>
           </motion.div>
 
-          {/* Contenu principal */}
+          {/* Pitch personnel en 6 actes */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            {/* Texte et valeurs */}
-            <motion.div variants={itemVariants}>
-              <h3 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
-                Votre partenaire digital de confiance
-              </h3>
+            {/* Contenu principal du pitch */}
+            <motion.div variants={itemVariants} className="space-y-6">
               
-              <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                Chez L'Art du Web, nous croyons que chaque projet est unique. Notre approche sur mesure 
-                combine expertise technique de pointe et créativité sans limite pour donner vie à vos idées 
-                les plus ambitieuses.
-              </p>
+              {/* 1. Accroche identitaire */}
+              <div className="bg-white dark:bg-dark-card rounded-xl p-6 border-l-4 border-purple">
+                <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">
+                  Lara Oueriagli, Intégratrice Web passionnée par l'innovation technologique
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Développeuse front-end spécialisée dans l'intégration web moderne, à l'intersection entre 
+                  design élégant, performance optimale et sécurité numérique.
+                </p>
+              </div>
 
-              <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                Depuis plus de 5 ans, nous accompagnons des entreprises de toutes tailles dans leur 
-                transformation digitale, en créant des solutions web qui allient esthétique, performance 
-                et résultats mesurables.
-              </p>
+              {/* 2. Parcours et légitimité */}
+              <div className="bg-white dark:bg-dark-card rounded-xl p-6 border-l-4 border-deep-blue">
+                <h4 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white flex items-center">
+                  <Target className="w-5 h-5 mr-2 text-deep-blue" />
+                  Parcours et Formation
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Passionnée de programmation depuis toujours, j'ai d'abord créé des jeux et logiciels personnels 
+                  avant de me tourner vers le développement web. J'ai récemment terminé ma formation 
+                  d'Intégrateur Web (Bac+2) chez OpenClassrooms, où j'ai découvert ma vocation 
+                  pour créer des expériences utilisateur exceptionnelles.
+                </p>
+              </div>
 
-              <motion.a
-                href="#contact"
-                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-deep-blue to-purple text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>En savoir plus sur notre approche</span>
-                <Rocket className="w-5 h-5" />
-              </motion.a>
+              {/* 3. Stack technique et expertise */}
+              <div className="bg-white dark:bg-dark-card rounded-xl p-6 border-l-4 border-gold">
+                <h4 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white flex items-center">
+                  <Rocket className="w-5 h-5 mr-2 text-gold" />
+                  Expertise Technique
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  Je maîtrise React, JavaScript ES6+, et les frameworks CSS modernes (Sass, TailwindCSS), 
+                  avec une expertise particulière en optimisation performance et accessibilité web. 
+                  Mes projets atteignent régulièrement des scores Lighthouse de 98%+.
+                </p>
+              </div>
             </motion.div>
 
-            {/* Image stylisée ou illustration */}
-            <motion.div 
-              variants={itemVariants}
-              className="relative"
-            >
-              <div className="relative bg-gradient-to-br from-deep-blue to-purple rounded-2xl p-1">
-                <div className="bg-white dark:bg-dark-bg rounded-2xl p-8">
-                  <motion.div
-                    className="grid grid-cols-2 gap-4"
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={hasBeenInView ? { scale: 1, opacity: 1 } : {}}
-                    transition={{ delay: 0.5, duration: 0.6 }}
-                  >
-                    {stats.map((stat, index) => (
-                      <motion.div
-                        key={index}
-                        className="text-center p-4 bg-gray-50 dark:bg-dark-card rounded-xl"
-                        whileHover={{ y: -5 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <div className="text-2xl font-bold bg-gradient-to-r from-deep-blue to-purple bg-clip-text text-transparent">
-                          {stat.number}
-                        </div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                          {stat.label}
-                        </div>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                </div>
-              </div>
+            <motion.div variants={itemVariants} className="space-y-6">
               
-              {/* Éléments décoratifs */}
-              <motion.div
-                className="absolute -top-4 -right-4 bg-gold/20 w-20 h-20 rounded-full blur-xl"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute -bottom-4 -left-4 bg-purple/20 w-16 h-16 rounded-full blur-xl"
-                animate={{ scale: [1, 1.3, 1] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
+              {/* 4. Projets marquants */}
+              <div className="bg-white dark:bg-dark-card rounded-xl p-6 border-l-4 border-green-500">
+                <h4 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white flex items-center">
+                  <Award className="w-5 h-5 mr-2 text-green-500" />
+                  Projets Marquants
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Je suis particulièrement fière du projet ArgentBank, une application bancaire complexe 
+                  développée avec React et Redux, et du site Nina Carducci où j'ai multiplié les performances 
+                  par 3 tout en atteignant le score SEO parfait de 100/100.
+                </p>
+              </div>
+
+              {/* 5. Approche unique */}
+              <div className="bg-white dark:bg-dark-card rounded-xl p-6 border-l-4 border-purple">
+                <h4 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white flex items-center">
+                  <Heart className="w-5 h-5 mr-2 text-purple" />
+                  Mon Approche
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Mon approche allie rigueur technique et créativité, en appliquant les méthodologies Agile 
+                  et une attention obsessionnelle aux détails. Je crois qu'un code propre et une UX parfaite 
+                  sont les fondements d'un web accessible et performant.
+                </p>
+              </div>
+
+              {/* 6. Ambitions */}
+              <div className="bg-white dark:bg-dark-card rounded-xl p-6 border-l-4 border-red-500">
+                <h4 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white flex items-center">
+                  <Brain className="w-5 h-5 mr-2 text-red-500" />
+                  Ambitions & Passions
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Mon objectif est d'intégrer une équipe innovante où je pourrais contribuer à des projets 
+                  d'envergure tout en développant mon expertise en Intelligence Artificielle et Cybersécurité, 
+                  deux domaines qui me passionnent et que j'explore activement.
+                </p>
+              </div>
             </motion.div>
           </div>
 
-          {/* Nos valeurs */}
+          {/* Compétences détaillées */}
           <motion.div variants={itemVariants}>
             <h3 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-              Nos valeurs fondamentales
+              Mes domaines de compétences
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {values.map((value, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {competences.map((competence, index) => (
                 <motion.div
                   key={index}
                   className="bg-white dark:bg-dark-card rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300"
@@ -186,35 +204,35 @@ const About = () => {
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <value.icon className="w-8 h-8 text-deep-blue dark:text-purple" />
+                    <competence.icon className="w-8 h-8 text-deep-blue dark:text-purple" />
                   </motion.div>
                   
                   <h4 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
-                    {value.title}
+                    {competence.title}
                   </h4>
                   
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    {value.description}
+                    {competence.description}
                   </p>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {/* Technologies et expertise */}
+          {/* Technologies maîtrisées */}
           <motion.div
             variants={itemVariants}
-            className="mt-20 text-center"
+            className="text-center"
           >
             <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
-              Technologies maîtrisées
+              Stack Technique & Outils
             </h3>
             
             <div className="flex flex-wrap justify-center gap-4">
-              {['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Node.js', 'SEO', 'Lighthouse', 'Figma'].map((tech, index) => (
+              {technologies.map((tech, index) => (
                 <motion.div
                   key={index}
-                  className="px-4 py-2 bg-gray-100 dark:bg-dark-card rounded-full text-sm font-medium text-gray-700 dark:text-gray-300"
+                  className="px-4 py-2 bg-gray-100 dark:bg-dark-card rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-purple/10 dark:hover:bg-purple/20 transition-colors"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={hasBeenInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 1.2 + index * 0.05 }}
@@ -224,6 +242,23 @@ const About = () => {
                 </motion.div>
               ))}
             </div>
+
+            <motion.div
+              className="mt-8"
+              initial={{ opacity: 0 }}
+              animate={hasBeenInView ? { opacity: 1 } : {}}
+              transition={{ delay: 2 }}
+            >
+              <motion.a
+                href="#contact"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-deep-blue to-purple text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>Découvrons nos synergies</span>
+                <Rocket className="w-5 h-5" />
+              </motion.a>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

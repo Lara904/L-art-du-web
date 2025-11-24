@@ -6,22 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1E3A8A" />
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="L'Art du Web - Création de sites web sur mesure, audit technique et SEO, optimisation de performances. Sublimez votre présence en ligne avec notre expertise." />
-    <meta name="keywords" content="création site web, audit SEO, optimisation web, développement web, React, performance web, UX design" />
-    <meta name="author" content="Lara - L'Art du Web" />
+    <!-- SEO Meta Tags - Portfolio Personnel -->
+    <meta name="description" content="Lara Oueriagli, fondatrice de L'Art du Web. Intégratrice web spécialisée en React et JavaScript. Portfolio de projets web, recherches IA et cybersécurité." />
+    <meta name="keywords" content="Lara Oueriagli, L'Art du Web, développeuse web, intégrateur web, React, JavaScript, HTML CSS, portfolio développeur, freelance web, Metz, développement front-end, cybersécurité, intelligence artificielle" />
+    <meta name="author" content="Lara Oueriagli" />
     <meta name="robots" content="index, follow" />
     
-    <!-- Open Graph / LinkedIn -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://lartduweb.fr/" />
-    <meta property="og:title" content="L'Art du Web - Sublimez votre présence en ligne" />
-    <meta property="og:description" content="Création de sites web sur mesure, audit technique et SEO, optimisation de performances. Expertise React et technologies modernes." />
-    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
-    <meta property="og:site_name" content="L'Art du Web" />
+    <!-- Géolocalisation (à adapter selon votre région) -->
+    <meta name="geo.region" content="FR" />
+    <meta name="geo.placename" content="Metz" />
     
-    <!-- LinkedIn specific -->
-    <meta property="article:author" content="Lara" />
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://votre-portfolio.netlify.app/" />
+    <meta property="og:title" content="Lara Oueriagli | L'Art du Web - Portfolio Développeuse Web" />
+    <meta property="og:description" content="Fondatrice de L'Art du Web, développeuse web passionnée par React, l'accessibilité et les performances. Spécialisée en développement front-end moderne avec un intérêt pour l'IA et la cybersécurité." />
+    <meta property="og:image" content="%PUBLIC_URL%/images/lara-nom-portfolio-og.jpg" />
+    <meta property="og:site_name" content="Portfolio Lara [Nom]" />
+    <meta property="og:locale" content="fr_FR" />
+    
+    <!-- Profile spécifique -->
+    <meta property="profile:first_name" content="Lara" />
+    <meta property="profile:last_name" content="[Votre Nom]" />
+    <meta property="profile:username" content="Lara904" />
+    
+    <!-- Social Media Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lara Oueriagli - Portfolio Développeuse Web" />
+    <meta name="twitter:description" content="Développeuse web React & JavaScript. Portfolio, projets IA et cybersécurité." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/images/lara-nom-portfolio-social.jpg" />
+    
+    <!-- Données structurées JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Lara Oueriagli",
+      "jobTitle": "Développeuse Web Full-Stack",
+      "description": "Fondatrice de L'Art du Web, intégratrice web spécialisée en React, JavaScript et technologies modernes. Passionnée par l'IA et la cybersécurité.",
+      "url": "https://votre-portfolio.netlify.app",
+      "image": "https://votre-portfolio.netlify.app/images/lara-oueriagli-portrait.jpg",
+      "sameAs": [
+        "https://github.com/Lara904",
+        "https://linkedin.com/in/votre-profil-linkedin"
+      ],
+      "knowsAbout": [
+        "JavaScript",
+        "React",
+        "HTML5",
+        "CSS3",
+        "Sass",
+        "TailwindCSS",
+        "API REST",
+        "Git",
+        "GitHub",
+        "SEO",
+        "Accessibilité web",
+        "Performance web",
+        "Intelligence Artificielle",
+        "Cybersécurité",
+        "TryHackMe",
+        "Capture The Flag"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "L'Art du Web",
+        "url": "https://votre-portfolio.netlify.app",
+        "founder": "Lara Oueriagli"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR",
+        "addressLocality": "Metz"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "OpenClassrooms",
+        "url": "https://openclassrooms.com"
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Développeuse Web",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "skills": [
+          "React",
+          "JavaScript ES6+",
+          "HTML/CSS",
+          "Responsive Design",
+          "Web Performance",
+          "SEO",
+          "Accessibilité"
+        ]
+      }
+    }
+    </script>
     
     <!-- Critical CSS inline pour éviter le render-blocking -->
     <style>
@@ -88,24 +169,53 @@
       #root {
         min-height: 100vh;
       }
+      
+      /* Optimisation des fonts */
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('Inter'), url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      }
     </style>
     
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Preconnect aux domaines externes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://api.emailjs.com" />
+    
+    <!-- PWA -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
-    <title>L'Art du Web - Sublimez votre présence en ligne</title>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://votre-portfolio.netlify.app/" />
+    
+    <!-- Hreflang pour versions multilingues (si nécessaire) -->
+    <link rel="alternate" hreflang="fr" href="https://votre-portfolio.netlify.app/" />
+    <link rel="alternate" hreflang="en" href="https://votre-portfolio.netlify.app/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://votre-portfolio.netlify.app/" />
+    
+    <title>L'Art du Web</title>
   </head>
   <body>
     <noscript>
-      <div style="padding: 20px; text-align: center; font-family: system-ui, sans-serif;">
-        <h1>JavaScript est requis</h1>
-        <p>Vous devez activer JavaScript pour utiliser cette application.</p>
-        <p>L'Art du Web - Création de sites web sur mesure</p>
+      <div style="padding: 20px; text-align: center; font-family: system-ui, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h1>JavaScript est requis pour ce portfolio</h1>
+        <p>Ce portfolio de Lara Oueriagli, développeuse web, nécessite JavaScript pour fonctionner correctement.</p>
+        <p>Veuillez activer JavaScript dans votre navigateur pour découvrir mes projets React, mes compétences en développement web et mes recherches en IA et cybersécurité.</p>
+        <hr style="margin: 20px 0;" />
+        <h2>Lara Oueriagli - Développeuse Web</h2>
+        <p><strong>Spécialités :</strong> React, JavaScript, HTML/CSS, SEO, Accessibilité</p>
+        <p><strong>Contact :</strong> <a href="mailto:votre.email@gmail.com">votre.email@gmail.com</a></p>
+        <p><strong>GitHub :</strong> <a href="https://github.com/Lara904">github.com/Lara904</a></p>
+        <p><strong>LinkedIn :</strong> <a href="https://linkedin.com/in/votre-profil-linkedin">LinkedIn</a></p>
       </div>
     </noscript>
     
-    <div class="initial-loader" id="initial-loader">
+    <div class="initial-loader" id="initial-loader" role="status" aria-label="Chargement du portfolio">
       <div class="loader-dots">
         <div class="dot"></div>
         <div class="dot"></div>
@@ -116,7 +226,9 @@
     <div id="root"></div>
     
     <script>
+      // Optimisation du chargement et gestion du thème
       window.addEventListener('DOMContentLoaded', function() {
+        // Performance: Masquer le loader dès que possible
         setTimeout(function() {
           const loader = document.getElementById('initial-loader');
           if (loader) {
@@ -126,11 +238,41 @@
             }, 300);
           }
         }, 100);
+        
+        // Analytics/tracking si nécessaire (à ajouter plus tard)
+        // gtag('event', 'page_view', { page_title: 'Portfolio Lara [Nom]' });
       });
       
+      // Gestion du mode sombre
       if (localStorage.getItem('theme') === 'dark' || 
           (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
+      }
+      
+      // Service Worker pour PWA (optionnel)
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('SW registered: ', registration);
+            })
+            .catch(function(registrationError) {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+      
+      // Optimisation des images lazy loading
+      if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[data-src]');
+        images.forEach(img => {
+          img.src = img.dataset.src;
+        });
+      } else {
+        // Fallback pour navigateurs sans support native
+        const script = document.createElement('script');
+        script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
+        document.head.appendChild(script);
       }
     </script>
   </body>
